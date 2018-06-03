@@ -1,0 +1,16 @@
+.container{
+  width: 500px;
+
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: -10px;
+  border-radius: 7px;
+}
+.checkout{
+padding: 15px 25px;
+border: none;
+background-color:orange;
+color: #fff;
+border-radius: 7px;
+}

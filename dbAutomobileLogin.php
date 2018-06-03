@@ -1,18 +1,16 @@
 <?php
   //print_r($_POST);
   require_once "pdo.php";
+  require_once('navigation.php');
     //not empty
     //atleast 6 characters
     //Start the session
 session_start();
 
 //Dump your POST variables
-if($_SESSION['Rsuccess'])
-{
-  echo("<h3 style='color:green' style='text-align:center'>".$_SESSION['Rsuccess'] ."</h3>");
-  $_SESSION['Rsuccess']="";
-}
-$_SESSION['POST'] = $_POST;
+
+
+//$_SESSION['POST'] = $_POST;
 
   $errors=array();    //all the values which are entered are stored in array
 
@@ -58,8 +56,13 @@ $_SESSION['POST'] = $_POST;
 
 <!-- -------------------------------------------------------------------->
 <html>
+<head>
+     <link href="dbAutomobileLogin.css" type="text/css" rel="stylesheet">
+</head>
 <body>
-  <h1>Welcome to Asian Garage</h1>
+  <center>
+    <div class="container">
+    <h1>Welcome to Asian Garage</h1>
   <h2>Please Log In</h2>
   <form method="post" target="">
     <p>User Name:
@@ -67,16 +70,13 @@ $_SESSION['POST'] = $_POST;
     </p>
     <p>Password:
       <input type="password" name="password" size="40"><p style="color:red"><?php if($_POST){ if(isset($errors['password'])) echo $errors['password']; }?></p>
-    </p>
+  </p>
+      <input type="submit" value="LOGIN" size="40" class="login_btn">
+    <!--  <input type="button"
+      onclick="location.href='dbRegister.php';return false;" value="Cancel" class="cancel">-->
 
-      <input type="hidden" name="id" size="40">
-
-    <p>
-      <input type="submit" value="Log In" size="40">
-      <input type="button"
-      onclick="location.href='http://localhost/db/dbRegister.php';return false;" value="Cancel">
-    </p>
   </form>
-
+</div>
+</center>
 </body>
 </html>

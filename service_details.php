@@ -1,5 +1,6 @@
 
 <?php
+include_once("navigation.php");
 session_start();
 if(!$_SESSION['Lsuccess'])
 {
@@ -13,6 +14,11 @@ if(!$_SESSION['Lsuccess'])
 }
   //echo("type = ".$_SESSION['type']." model = ".$_SESSION['model']."  manufacturer = ".$_SESSION['manufacturer']);
  ?>
+ <head>
+<link href="service_details.css" type="text/css" rel="stylesheet">
+ </head>
+ <center>
+   <div class="container">
 <form method="post" action="estimation.php">
 <p><br>
   <input type="checkbox" name="service" value="service" checked>General Service
@@ -24,6 +30,8 @@ if(!$_SESSION['Lsuccess'])
     </textarea>
 </p>
 <p>
-  <input type="submit" value="Proceed">
+  <input type="submit" value="Proceed" class="proceed">
 </p>
 </form>
+</div>
+</center>
