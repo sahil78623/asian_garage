@@ -1,4 +1,6 @@
-<?php
+
+ <?php
+/*
   //print_r($_POST);
   require_once "pdo.php";
     //not empty
@@ -52,7 +54,7 @@ $_SESSION['POST'] = $_POST;
               }
         }
 
-
+*/
  ?>
 
 
