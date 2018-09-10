@@ -24,7 +24,27 @@ input[type="text"],input[type="password"]{
  padding-left: 40px;
  border-radius: 7px;
 }
+.text_inp
+{
+  text-align: center;
+}
 .register{
+padding: 15px 25px;
+border: none;
+background-color:orange;
+color: #fff;
+border-radius: 7px;
+}
+h2{
+    font-family: arial;
+
+}
+p{
+  font-family: arial;
+  font-size: 20px;
+  text-align: center;
+}
+.proceed_btn{
 padding: 15px 25px;
 border: none;
 background-color:orange;

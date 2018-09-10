@@ -5,7 +5,8 @@ session_start();
 if(!$_SESSION['Lsuccess'])
 {
   $_SESSION['error']="UN AUTHORISED LOGIN DETECTED";
-  header("Location:dbAutomobileLogin.php");
+
+  header("Location:home.php");
 }
  if($_POST)
  {

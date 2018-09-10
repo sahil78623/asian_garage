@@ -1,9 +1,16 @@
 <?php
   session_start();
+  if(!$_SESSION['Lsuccess'])
+  {
+    $_SESSION['error']="UN AUTHORISED LOGIN DETECTED";
+
+    header("Location:home.php");
+  }
     include_once("navigation.php");
  ?>
 <html>
 <head>
+  <title>Asian Garage</title>
 <link href="estimation.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRCP27ppEAZ-yQDkJdYMQg18yepmPJz04" type="text/javascript"></script>

@@ -1,6 +1,8 @@
+
   <!DOCTYPE html>
   <html lang="en">
   <head>
+      <title>Asian Garage</title>
       <meta charset="UTF-8">
       <title>Document</title>
       <style>

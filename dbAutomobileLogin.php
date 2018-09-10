@@ -1,10 +1,10 @@
-<?php
-  //print_r($_POST);
+
+ <?php
+
+
   require_once "pdo.php";
   require_once('navigation.php');
-    //not empty
-    //atleast 6 characters
-    //Start the session
+
 session_start();
 
 //Dump your POST variables
@@ -14,7 +14,6 @@ session_start();
 
   $errors=array();    //all the values which are entered are stored in array
 
-  //start validation
     if(empty($_POST['name']))
     {
       $errors['name']="Invalid User Name";
@@ -43,11 +42,11 @@ session_start();
                 header("Location:bike_details.php");
                 exit();
               }
-              else{
-
-                echo("<h3 style='color:red'>Login FAILED</h3>");
-
+              else {
+                  $errors['name']="Invalid User Name";
+                  $errors['password']="Invalid Password";
               }
+
         }
 
 
@@ -57,6 +56,7 @@ session_start();
 <!-- -------------------------------------------------------------------->
 <html>
 <head>
+    <title>Asian Garage</title>
      <link href="dbAutomobileLogin.css" type="text/css" rel="stylesheet">
 </head>
 <body>

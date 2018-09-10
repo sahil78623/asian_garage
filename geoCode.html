@@ -3,9 +3,15 @@
     <head>
         <title>Test</title>
 
+<<<<<<< HEAD
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6wHrxBo8riTl7a546dQLKDYOSrizkIoI"
         type="text/javascript"></script>
 
+=======
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhqBeYVJWZALWa94b35kFdq6KJZAg_BIg"
+        type="text/javascript"></script>
+        
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e
     </head>
     <body>
         <input type="text" id="source" onchange="addrCoordinate()" >
@@ -14,35 +20,67 @@
         <input type="button" value="Get Distance" onclick="getDistance()">
     </body>
     <script>
+<<<<<<< HEAD
             var currentLatLng;
             var serviceLatLng;
 
             // Get the service center lat and lng
             serviceLatLng = new google.maps.LatLng(17.496113, 78.513131);
+=======
+
+            var currentLatLng;
+            var serviceLatLng;
+       
+
+            // Get the service center lat and lng
+            serviceLatLng = new google.maps.LatLng(17.496113, 78.513131);
+
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e
             // Get current location
             function getMyLocation(){
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(showPosition);
+<<<<<<< HEAD
                 } else {
+=======
+                } else { 
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e
                     x.innerHTML = "Geolocation is not supported by this browser.";
                 }
             }
 
+<<<<<<< HEAD
 
+=======
+        
+        
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e
             function showPosition(position) {
                 var lat;
                 var lng;
                 lat = position.coords.latitude;
                 lng = position.coords.longitude;
+<<<<<<< HEAD
 
 
+=======
+    
+    
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e
                 currentLatLng = new google.maps.LatLng(lat,lng);
                 //console.log("lat: "+);
                 console.log("lng: "+lng);
             }
+<<<<<<< HEAD
         var dist;
         function getDistance(){
 
+=======
+
+        var dist;
+        function getDistance(){
+            
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e
             var service = new google.maps.DistanceMatrixService();
             service.getDistanceMatrix(
             {
@@ -51,6 +89,7 @@
                 travelMode: 'DRIVING',
                 avoidHighways: true,
                 avoidTolls: true,
+<<<<<<< HEAD
             }, callback);
         }
         function callback(response,status){
@@ -59,12 +98,29 @@
               dist = response.rows[0].elements[0].distance.text;
               alert(dist);
         }
+=======
+            }, callback); 
+        }
+
+        function callback(response,status){
+    
+             //   alert(JSON.stringify(response.rows[0].elements[0].distance.text));
+              dist = response.rows[0].elements[0].distance.text;
+
+              alert(dist);
+        }
+
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e
         // Get from address to coordinate
         function addrCoordinate(){
             var source = document.getElementById("source").value;
             var encodedAddr = encodeURIComponent(source);
             var xhttp = new XMLHttpRequest();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e
             xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 console.log(this.responseText);
@@ -73,5 +129,12 @@
             xhttp.open("GET", `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddr}`, true);
             xhttp.send();
         }
+<<<<<<< HEAD
     </script>
 </html>
+=======
+
+
+    </script>
+</html>
+>>>>>>> 219915d82e2c41c15c36cdf3d1d1a5c010fc142e

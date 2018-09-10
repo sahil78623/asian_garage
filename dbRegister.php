@@ -1,18 +1,10 @@
-<?php
-  //print_r($_POST);
+  <?php
 
   session_start();
-    //not empty
-    //atleast 6 characters
-    //Start the session
-//session_start();
 
-//Dump your POST variables
-//$_SESSION['POST'] = $_POST;
 
-    //all the values which are entered are stored in array
+$_SESSION['POST'] = $_POST;
 
-  //start validation
   $_SESSION['error']=false;
 
     if(empty($_POST['Rname']))
@@ -74,10 +66,12 @@
 <?php   require_once('navigation.php'); ?>
  <html>
  <head>
+   <title>Asian Garage</title>
    <link href="dbRegister.css" type="text/css" rel="stylesheet">
+   <script type="text/javascript" src="googleLogin.html"></script>
  </head>
  <body>
-   
+
    <?php
    try {
 
@@ -124,6 +118,10 @@
       echo "<p style='color:red'>Customer Already Registered</p>";
    }
     ?>
+
+
+
+
   <center><div class="container">
      <form method="post" id="form">
 
@@ -139,7 +137,9 @@
    <p>Password:
      <input type="password" name="Rpassword" size="40" value="<?= htmlentities($pwd)?>"> <p style="color:red"> <?php if(isset($_SESSION['Rpassword']) && $_POST) {echo $_SESSION['Rpassword']; } unset($_SESSION['Rpassword']); ?></p>
    </p>
-   <input type="submit" value="Register" size="40" class="register">
+   <input type="submit" value="Register" size="40" class="register"><br>
+   <div class="g-signin2" data-onsuccess="onSignIn"></div>
+     <a href="home.php" onclick="signOut();">Back</a>
  </form>
 </div>
 </center>
